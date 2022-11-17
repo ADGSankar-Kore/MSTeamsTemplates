@@ -3,164 +3,186 @@
 Please refer to the below mentioned github repo for the methods mentioned in the documentation
 
 <h2>1. Password Template</h2>
-
 <h3>Syntax</h3>
-passwordTemplate(<string to be displayed>)
-
+<code>passwordTemplate(&quot;string to be displayed&quot;)</code>
 <h3>Usage</h3>
-passwordTemplate("Please provide password")
 
-For this template, we need to use a composite entity and the value will be available at context.entities.<entityName>.password.
+passwordTemplate(&quot;Please provide password&quot;)
 
+For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;.password.
 
 2. Dropdown Template
-
 Syntax
-dropdownTemplate(<string to be displayed>,<placeholder text>,<options>)
+dropdownTemplate(&lt;string to be displayed&gt;,&lt;placeholder text&gt;,&lt;options&gt;)
 Where options is an array of objects and each object is as follows
-<code>{
-	"title" : "<title>",
-	"payload" : "<payload>"
-}</code>
-
+`{
+    &quot;title&quot; : &quot;&lt;title&gt;&quot;,
+    &quot;payload&quot; : &quot;&lt;payload&gt;&quot;
+}`
 Usage
-dropdownTemplate("Please choose option from below","select option",[{"title": "option1","payload": "option1"},{"title": "option2","payload": "option2"},{"title": "option3","payload": "option3"}])
-
-For this template, we need to use a composite entity and the value will be available at context.entities.<entityName>.choice.
+dropdownTemplate(&quot;Please choose option from below&quot;,&quot;select option&quot;,[{&quot;title&quot;: &quot;option1&quot;,&quot;payload&quot;: &quot;option1&quot;},{&quot;title&quot;: &quot;option2&quot;,&quot;payload&quot;: &quot;option2&quot;},{&quot;title&quot;: &quot;option3&quot;,&quot;payload&quot;: &quot;option3&quot;}])
 
 
+
+
+
+For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;.choice.
 3. Button Template
-
 Syntax
-buttonTemplate(<string to be displayed>,<options>)
+buttonTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)
 Where options is an array of objects and each object is as follows
-    Button
-        {
-            "type" : "postback"
-            "title" : "<title>",
-            "payload" : "<payload>"
-        }
-    URL
-        {
-            "type" : "url"
-            "title" : "<title>",
-            "url" : "<URL>"
-        }
+Button
+{
+    &quot;type&quot; : &quot;postback&quot;
+&quot;title&quot; : &quot;&lt;title&gt;&quot;,
+&quot;payload&quot; : &quot;&lt;payload&gt;&quot;
+}
+URL
+{
+&quot;type&quot; : &quot;url&quot;
+&quot;title&quot; : &quot;&lt;title&gt;&quot;,
+&quot;url&quot; : &quot;&lt;URL&gt;&quot;
 
+}
 Usage
-buttonTemplate("buttons to test", [{"type": "postback", "title": "button1","payload": "b1"}, { "type": "postback", "title": "button2", "payload": "b2" }, { "type": "url", "title": "google", "url": "https://www.google.com" }, { "type": "postback", "title": "button3", "payload": "b3" }, { "type": "postback", "title": "button4", "payload": "b4" }, { "type": "postback", "title": "button5", "payload": "b5" }, { "type": "postback", "title": "button6", "payload": "b6" }, { "type": "postback", "title": "button7", "payload": "b7" }, { "type": "url", "title": "bots", "url": "https://bots.kore.ai" }, { "type": "postback", "title": "button8", "payload": "b8" }, { "type": "postback", "title": "button9", "payload": "b9" }, { "type": "postback", "title": "button10", "payload": "b10" }, { "type": "postback", "title": "button11", "payload": "b11" }, { "type": "url", "title": "youtube", "url": "https://www.youtube.com" }])))
+buttonTemplate(&quot;buttons to test&quot;, [{&quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button1&quot;,&quot;payload&quot;: &quot;b1&quot;}, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button2&quot;, &quot;payload&quot;: &quot;b2&quot; }, { &quot;type&quot;: &quot;url&quot;, &quot;title&quot;: &quot;google&quot;, &quot;url&quot;: &quot;https://www.google.com&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button3&quot;, &quot;payload&quot;: &quot;b3&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button4&quot;, &quot;payload&quot;: &quot;b4&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button5&quot;, &quot;payload&quot;: &quot;b5&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button6&quot;, &quot;payload&quot;: &quot;b6&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button7&quot;, &quot;payload&quot;: &quot;b7&quot; }, { &quot;type&quot;: &quot;url&quot;, &quot;title&quot;: &quot;bots&quot;, &quot;url&quot;: &quot;https://bots.kore.ai&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button8&quot;, &quot;payload&quot;: &quot;b8&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button9&quot;, &quot;payload&quot;: &quot;b9&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button10&quot;, &quot;payload&quot;: &quot;b10&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button11&quot;, &quot;payload&quot;: &quot;b11&quot; }, { &quot;type&quot;: &quot;url&quot;, &quot;title&quot;: &quot;youtube&quot;, &quot;url&quot;: &quot;https://www.youtube.com&quot; }])))
+
+
+
+
+
 
 
 4. Table Template
 Syntax
-tableTemplate(<string to be displayed>,<options>)
+tableTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)
 Where options is an object and has two keys i.e columns and rows
+{
+    &quot;columns&quot; :[
     {
-        "columns" :[
-        {
-            "name" : "<cloumn 1 name>",
-            "align" : "<left/center/right>" // optional
-        }
-    ]
-    "rows" : [
-            [{
-                "text":<value>,
-                "align" : ""<left/center/right>" //optional
-            }]
-        ]
+        &quot;name&quot; : &quot;&lt;cloumn 1 name&gt;&quot;,
+        &quot;align&quot; : &quot;&lt;left/center/right&gt;&quot; // optional
     }
+]
+&quot;rows&quot; : [
+        [{
+&quot;text&quot;:&lt;value&gt;,
+&quot;align&quot; : &quot;&quot;&lt;left/center/right&gt;&quot; //optional
+ }]
+]
+}
 Usage
-tableTemplate("Here are the ticket details",  {
-    "columns": [
-        {"name": "column1"},{"name": "column2","align": "center"},{"name": "column3","align": "right"}
+tableTemplate(&quot;Here are the ticket details&quot;,  {
+    &quot;columns&quot;: [
+        {&quot;name&quot;: &quot;column1&quot;},{&quot;name&quot;: &quot;column2&quot;,&quot;align&quot;: &quot;center&quot;},{&quot;name&quot;: &quot;column3&quot;,&quot;align&quot;: &quot;right&quot;}
     ],
-    "rows": [
-        [{ "text": "value11" }, { "text": "value12", "align": "center" }, { "text": "value13", "align": "right" }],
-        [{ "text": "value21" }, { "text": "value22", "align": "center" }, { "text": "value23", "align": "right" }],
-        [{ "text": "value31" }, { "text": "value32", "align": "center" }, { "text": "value33", "align": "right" }]
+    &quot;rows&quot;: [
+        [{ &quot;text&quot;: &quot;value11&quot; }, { &quot;text&quot;: &quot;value12&quot;, &quot;align&quot;: &quot;center&quot; }, { &quot;text&quot;: &quot;value13&quot;, &quot;align&quot;: &quot;right&quot; }],
+        [{ &quot;text&quot;: &quot;value21&quot; }, { &quot;text&quot;: &quot;value22&quot;, &quot;align&quot;: &quot;center&quot; }, { &quot;text&quot;: &quot;value23&quot;, &quot;align&quot;: &quot;right&quot; }],
+        [{ &quot;text&quot;: &quot;value31&quot; }, { &quot;text&quot;: &quot;value32&quot;, &quot;align&quot;: &quot;center&quot; }, { &quot;text&quot;: &quot;value33&quot;, &quot;align&quot;: &quot;right&quot; }]
     ]
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 5. Image Template
 Syntax
-imageTemplate(<string to be displayed>, "image url")
+imageTemplate(&lt;string to be displayed&gt;, &quot;image url&quot;)
 Usage
-imageTemplate("Here is the image","https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg")
+imageTemplate(&quot;Here is the image&quot;,&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;)
+
+
+
+
 
 
 6. Carousel Template
-
 Syntax
-tableTemplate(<string to be displayed>,<options>)
+tableTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)
 Where options is an array of objects and each object is as follows
 {
-	"Image_url" : "url" //optional
-    "title": "<title>",
-	"subtitle": "<subtitle>",
-	"default_actions": [
-        {
-            "type" : "postback"
-            "title" : "<title>",
-            "payload" : "<payload>"
-        }
-        //or
-        {
-            "type" : "url"
-            "title" : "<title>",
-            "url" : "<URL>"
-        }  
-	] //optional
+    &quot;Image_url&quot; : &quot;url&quot; //optional
+&quot;title&quot;: &quot;&lt;title&gt;&quot;,
+    &quot;subtitle&quot;: &quot;&lt;subtitle&gt;&quot;,
+    &quot;default_actions&quot;: [
+{
+    &quot;type&quot; : &quot;postback&quot;
+&quot;title&quot; : &quot;&lt;title&gt;&quot;,
+&quot;payload&quot; : &quot;&lt;payload&gt;&quot;
 }
-
+//or
+{
+&quot;type&quot; : &quot;url&quot;
+&quot;title&quot; : &quot;&lt;title&gt;&quot;,
+&quot;url&quot; : &quot;&lt;URL&gt;&quot;
+}  
+    ] //optional
+}
 Usage
-carouselTemplate("Here are the carousel items",[
+carouselTemplate(&quot;Here are the carousel items&quot;,[
     {
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg",
-        "title": "Carouse1",
-        "subtitle": "This is carousel1 template",
-        "default_actions": [
-            { "type": "postback", "title": "button1", "payload": "b1" },
-            { "type": "url", "title": "google", "url": "https://www.google.com" }
+        &quot;image_url&quot;: &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;,
+        &quot;title&quot;: &quot;Carouse1&quot;,
+        &quot;subtitle&quot;: &quot;This is carousel1 template&quot;,
+        &quot;default_actions&quot;: [
+            { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button1&quot;, &quot;payload&quot;: &quot;b1&quot; },
+            { &quot;type&quot;: &quot;url&quot;, &quot;title&quot;: &quot;google&quot;, &quot;url&quot;: &quot;https://www.google.com&quot; }
         ]
     },
     {
-        "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg",
-        "title": "Carouse2",
-        "subtitle": "This is carousel2 template",
-        "default_actions": [
-            { "type": "postback", "title": "button2", "payload": "b2" }
+        &quot;image_url&quot;: &quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;,
+        &quot;title&quot;: &quot;Carouse2&quot;,
+        &quot;subtitle&quot;: &quot;This is carousel2 template&quot;,
+        &quot;default_actions&quot;: [
+            { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button2&quot;, &quot;payload&quot;: &quot;b2&quot; }
         ]
     },
     {
-        "title": "Carouse1",
-        "subtitle": "This is carousel3 template",
-        "default_actions": [
-            { "type": "postback", "title": "button3", "payload": "b3" },
-            { "type": "url", "title": "google", "url": "https://www.google.com" }
+        &quot;title&quot;: &quot;Carouse1&quot;,
+        &quot;subtitle&quot;: &quot;This is carousel3 template&quot;,
+        &quot;default_actions&quot;: [
+            { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button3&quot;, &quot;payload&quot;: &quot;b3&quot; },
+            { &quot;type&quot;: &quot;url&quot;, &quot;title&quot;: &quot;google&quot;, &quot;url&quot;: &quot;https://www.google.com&quot; }
         ]
     }
 ])
 
 
 7. Multiselect Template
-
 Syntax
-multiSelectTemplate(<string to be displayed>,<options>)
+multiSelectTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)
 Where options is an array of choices(strings)
-
 Usage
-multiSelectTemplate("Please choose choices from below",["User1","User2","User3","User4","User5"])
+multiSelectTemplate(&quot;Please choose choices from below&quot;,[&quot;User1&quot;,&quot;User2&quot;,&quot;User3&quot;,&quot;User4&quot;,&quot;User5&quot;])
 
-For this template, we need to use a composite entity and the value will be available at context.entities.<entityName>. The entity will contains object with the choices as keys. The selected keys value will be true and the remaining keys will be false.
+For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;. The entity will contains object with the choices as keys. The selected keys value will be true and the remaining keys will be false.
+
+
+
+
+
 
 
 8. Date Template
-
 Syntax
-dateTemplate(<string to be displayed>)
-
+dateTemplate(&lt;string to be displayed&gt;)
 Usage
-dateTemplate("Please choose the date from below")
+dateTemplate(&quot;Please choose the date from below&quot;)
 
-For this template, we need to use a composite entity and the value will be available at context.entities.<entityName>.date.
+
+
+For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;.date.
+
+
+
