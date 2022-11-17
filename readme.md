@@ -1,4 +1,4 @@
-<h1>MS Teams templates<h1>
+<h1>MS Teams templates</h1>
 
 Please refer to the below mentioned github repo for the methods mentioned in the documentation
 
