@@ -4,10 +4,10 @@ Please refer to the below mentioned github repo for the methods mentioned in the
 
 <h2>1. Password Template</h2>
 
-<h3>Syntax<h3>
+<h3>Syntax</h3>
 passwordTemplate(<string to be displayed>)
 
-<h3>Usage<h3>
+<h3>Usage</h3>
 passwordTemplate("Please provide password")
 
 For this template, we need to use a composite entity and the value will be available at context.entities.<entityName>.password.
@@ -18,10 +18,10 @@ For this template, we need to use a composite entity and the value will be avail
 Syntax
 dropdownTemplate(<string to be displayed>,<placeholder text>,<options>)
 Where options is an array of objects and each object is as follows
-    <code>{
-        "title" : "<title>",
-        "payload" : "<payload>"
-    }</code>
+<code>{
+	"title" : "<title>",
+	"payload" : "<payload>"
+}</code>
 
 Usage
 dropdownTemplate("Please choose option from below","select option",[{"title": "option1","payload": "option1"},{"title": "option2","payload": "option2"},{"title": "option3","payload": "option3"}])
