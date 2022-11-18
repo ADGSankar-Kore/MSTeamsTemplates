@@ -137,6 +137,3 @@ For this template, we need to use a composite entity and the value will be avail
 <code>dateTemplate(&quot;Please choose the date from below&quot;)</code>
 
 For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;.date.
-
-
-
