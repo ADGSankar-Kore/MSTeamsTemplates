@@ -61,7 +61,7 @@ Where options is an object and has two keys i.e columns and rows
         [{ &quot;text&quot;: &quot;value21&quot; }, { &quot;text&quot;: &quot;value22&quot;, &quot;align&quot;: &quot;center&quot; }, { &quot;text&quot;: &quot;value23&quot;, &quot;align&quot;: &quot;right&quot; }],
         [{ &quot;text&quot;: &quot;value31&quot; }, { &quot;text&quot;: &quot;value32&quot;, &quot;align&quot;: &quot;center&quot; }, { &quot;text&quot;: &quot;value33&quot;, &quot;align&quot;: &quot;right&quot; }]
     ]
-})</code
+})</code>
 
 <h2>5. Image Template</h2>
 <h3>Syntax</h3>
