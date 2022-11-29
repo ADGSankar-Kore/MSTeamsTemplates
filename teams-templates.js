@@ -332,7 +332,7 @@ var data = [
     }
 ]
 
-console.log(JSON.stringify(carouselTemplate("Here are the carousel items",data)))
+// console.log(JSON.stringify(carouselTemplate("Here are the carousel items",data)))
 
 const multiSelectTemplate = (displayText, options) => {
 
