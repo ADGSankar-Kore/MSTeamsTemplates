@@ -74,7 +74,7 @@ Where options is an object and has two keys i.e columns and rows
 <code>tableTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)</code>
 Where options is an array of objects and each object is as follows
 <code>{
-    &quot;Image_url&quot; : &quot;url&quot; //optional
+    &quot;Image_url&quot; : &quot;url&quot;, //optional
 &quot;title&quot;: &quot;&lt;title&gt;&quot;,
     &quot;subtitle&quot;: &quot;&lt;subtitle&gt;&quot;,
     &quot;default_actions&quot;: [
@@ -172,7 +172,7 @@ Where options is an array of objects and each object is as follows
 <code>listViewTemplate2(&lt;string to be displayed&gt;,&lt;options&gt;,&lt;number of items to be displayed on top&gt;,&lt;see more tex&gt;)</code>
 Where options is an array of objects and each object is as follows
 <code>{
-     &quot;Image_url&quot; : &quot;url&quot;, //optional
+     &quot;image_url&quot; : &quot;url&quot;, //optional
 &quot;title&quot;: &quot;&lt;title&gt;&quot;,
     &quot;subtitle&quot;: &quot;&lt;subtitle&gt;&quot;,
     &quot;default_actions&quot;: [
