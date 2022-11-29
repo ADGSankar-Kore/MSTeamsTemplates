@@ -259,13 +259,13 @@ const carouselTemplate = (displayText, data = []) => {
                 "separator": true
             })
         }
-        if (data[0].image_url) {
+        if (data[i].image_url) {
             body[0].items.push({
                 "type": "Image",
                 "url": data[i].image_url
             })
         }
-        if (data[0].subtitle) {
+        if (data[i].subtitle) {
             body[0].items.push({
                 "type": "TextBlock",
                 "text": data[i].subtitle,
@@ -332,7 +332,7 @@ var data = [
     }
 ]
 
-// console.log(JSON.stringify(carouselTemplate("Here are the carousel items",data)))
+console.log(JSON.stringify(carouselTemplate("Here are the carousel items",data)))
 
 const multiSelectTemplate = (displayText, options) => {
 
