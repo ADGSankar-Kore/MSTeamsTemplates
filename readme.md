@@ -166,3 +166,28 @@ Where options is an array of objects and each object is as follows
 {&quot;title&quot;:&quot;Carouse 2&quot;,&quot;subtitle&quot;:&quot;This is carousel 2 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button2&quot;,&quot;payload&quot;:&quot;b2&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]},
 {&quot;title&quot;:&quot;Carouse 3&quot;,&quot;subtitle&quot;:&quot;This is carousel 3 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button3&quot;,&quot;payload&quot;:&quot;b3&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]},
 {&quot;title&quot;:&quot;Carouse 4&quot;,&quot;subtitle&quot;:&quot;This is carousel 4 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button4&quot;,&quot;payload&quot;:&quot;b4&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]}], 3, &quot;See More/Less&quot;)</code>
+
+<h2>10. List View Template2</h2>
+<h3>Syntax</h3>
+<code>listViewTemplate2(&lt;string to be displayed&gt;,&lt;options&gt;,&lt;number of items to be displayed on top&gt;,&lt;see more tex&gt;)</code>
+Where options is an array of objects and each object is as follows
+<code>{
+     &quot;Image_url&quot; : &quot;url&quot;, //optional
+&quot;title&quot;: &quot;&lt;title&gt;&quot;,
+    &quot;subtitle&quot;: &quot;&lt;subtitle&gt;&quot;,
+    &quot;default_actions&quot;: [
+{
+    &quot;type&quot; : &quot;postback&quot;
+&quot;title&quot; : &quot;&lt;title&gt;&quot;,
+&quot;payload&quot; : &quot;&lt;payload&gt;&quot;
+}
+//or
+{
+&quot;type&quot; : &quot;url&quot;
+&quot;title&quot; : &quot;&lt;title&gt;&quot;,
+&quot;url&quot; : &quot;&lt;URL&gt;&quot;
+}  
+    ] //optional
+}</code>
+<h3>Usage</h3>
+<code>listViewTemplate2(&quot;list view template 2&quot;,[{&quot;image_url&quot;:&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;,&quot;title&quot;:&quot;Carouse 0&quot;,&quot;subtitle&quot;:&quot;This is carousel 0 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button0&quot;,&quot;payload&quot;:&quot;b0&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]},{&quot;image_url&quot;:&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;,&quot;title&quot;:&quot;Carouse 1&quot;,&quot;subtitle&quot;:&quot;This is carousel 1 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button1&quot;,&quot;payload&quot;:&quot;b1&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]},{&quot;image_url&quot;:&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;,&quot;title&quot;:&quot;Carouse 2&quot;,&quot;subtitle&quot;:&quot;This is carousel 2 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button2&quot;,&quot;payload&quot;:&quot;b2&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]},{&quot;image_url&quot;:&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;,&quot;title&quot;:&quot;Carouse 3&quot;,&quot;subtitle&quot;:&quot;This is carousel 3 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button3&quot;,&quot;payload&quot;:&quot;b3&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]},{&quot;image_url&quot;:&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;,&quot;title&quot;:&quot;Carouse 4&quot;,&quot;subtitle&quot;:&quot;This is carousel 4 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button4&quot;,&quot;payload&quot;:&quot;b4&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]}], 3, &quot;See More/Less&quot;)</code>
