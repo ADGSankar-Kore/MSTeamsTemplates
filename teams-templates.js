@@ -383,3 +383,106 @@ const dateTemplate = (displayText) => {
 }
 
 // console.log(JSON.stringify(dateTemplate("Please choose the date from below")))
+
+const listViewTemplate1 = (displayText, data = [], topItemsCount, showMoreText) => {
+    var length = data.length;
+    var body = [{
+        "type": "TextBlock",
+        "text": displayText,
+        "wrap": true
+    }]
+    if (length > topItemsCount) {
+        adaptiveCard.attachments[0].content.actions = [{
+            "type": "Action.ToggleVisibility",
+            "title": showMoreText,
+            "targetElements": [],
+            "separator": true
+        }]
+    }
+    for (var i = 0; i < length; i++) {
+        var isVisible = true;
+        if (i >= topItemsCount) {
+            isVisible = false;
+            adaptiveCard.attachments[0].content.actions[0].targetElements.push("idx" + i);
+        }
+        var elements = {
+            "type": "ColumnSet",
+            "isVisible": isVisible,
+            "id": "idx" + i,
+            "columns": [],
+            "separator": true,
+            "spacing": "Large"
+        }
+        var column = {
+            "type": "Column",
+            "items": []
+        }
+        if (data[i].title) {
+            column.items.push({
+                "type": "TextBlock",
+                "size": "Large",
+                "weight": "Bolder",
+                "text": data[i].title,
+                "wrap": true
+            })
+        }
+        if (data[i].subtitle) {
+            column.items.push({
+                "type": "TextBlock",
+                "text": data[i].subtitle,
+                "wrap": true,
+                "separator": true
+            })
+        }
+
+        var actionsSet = {
+            "type": "ActionSet",
+            "actions" : []
+        }
+        if (data[i].default_actions) {
+            data[i].default_actions.forEach(action => {
+                if (action.type === "url") {
+                    actionsSet.actions.push({
+                        "type": "Action.OpenUrl",
+                        "title": action.title,
+                        "url": action.url
+                    })
+                } else {
+                    actionsSet.actions.push({
+                        "type": "Action.Submit",
+                        "title": action.title,
+                        "data": {
+                            "msteams": {
+                                "type": "messageBack",
+                                "displayText": action.title,
+                                "text": action.payload
+                            }
+                        }
+                    })
+                }
+            })
+        }
+        column.items.push(actionsSet);
+        elements.columns.push(column);
+        body.push(elements)
+    }
+    adaptiveCard.attachments[0].content.body = body;
+    return adaptiveCard;
+}
+
+var data = []
+for (var i = 0; i < 5; i++) {
+    data.push(
+        {
+            // "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg",
+            "title": "Carouse " + i,
+            "subtitle": `This is carousel ${i} template`,
+            "default_actions": [
+                { "type": "postback", "title": "button" + i, "payload": "b" + i },
+                { "type": "url", "title": "google", "url": "https://www.google.com" }
+            ]
+        }
+    )
+}
+// console.log(JSON.stringify(data))
+// console.log(JSON.stringify(listViewTemplate1("list view template 1", data, 3, "See More/Less")))
