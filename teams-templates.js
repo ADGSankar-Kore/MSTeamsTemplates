@@ -613,5 +613,5 @@ for (var i = 0; i < 5; i++) {
         }
     )
 }
-console.log(JSON.stringify(data))
-console.log(JSON.stringify(listViewTemplate2("list view template 2", data, 3, "See More/Less")))
+// console.log(JSON.stringify(data))
+// console.log(JSON.stringify(listViewTemplate2("list view template 2", data, 3, "See More/Less")))
