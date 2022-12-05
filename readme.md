@@ -12,16 +12,16 @@ Please refer to the below mentioned github repo for the methods mentioned in the
 <code>genericTemplate({&quot;type&quot;:&quot;AdaptiveCard&quot;,&quot;$schema&quot;:&quot;http://adaptivecards.io/schemas/adaptive-card.json&quot;,&quot;version&quot;:&quot;1.2&quot;,&quot;body&quot;:[{&quot;type&quot;:&quot;TextBlock&quot;,&quot;text&quot;:&quot;New TextBlock&quot;,&quot;wrap&quot;:true},{&quot;type&quot;:&quot;Image&quot;},{&quot;type&quot;:&quot;RichTextBlock&quot;,&quot;inlines&quot;:[{&quot;type&quot;:&quot;TextRun&quot;,&quot;text&quot;:&quot;New RichTextBlock&quot;}]},{&quot;type&quot;:&quot;FactSet&quot;,&quot;facts&quot;:[{&quot;title&quot;:&quot;Fact 1&quot;,&quot;value&quot;:&quot;Value 1&quot;},{&quot;title&quot;:&quot;Fact 2&quot;,&quot;value&quot;:&quot;Value 2&quot;}]},{&quot;type&quot;:&quot;Input.Time&quot;},{&quot;type&quot;:&quot;Input.ChoiceSet&quot;,&quot;choices&quot;:[{&quot;title&quot;:&quot;Choice 1&quot;,&quot;value&quot;:&quot;Choice 1&quot;},{&quot;title&quot;:&quot;Choice 2&quot;,&quot;value&quot;:&quot;Choice 2&quot;}],&quot;placeholder&quot;:&quot;Placeholder text&quot;}]})</code>
 
 
-<h2>1. Password Template</h2>
+<h2>2. Password Template</h2>
 <h3>Syntax</h3>
 <code>passwordTemplate(&quot;string to be displayed&quot;)</code>
 <h3>Usage</h3>
 
-passwordTemplate(&quot;Please provide password&quot;)
+<code>passwordTemplate(&quot;Please provide password&quot;)</code>
 
 For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;.password.
 
-<h2>2. Dropdown Template</h2>
+<h2>3. Dropdown Template</h2>
 <h3>Syntax</h3>
 dropdownTemplate(&lt;string to be displayed&gt;,&lt;placeholder text&gt;,&lt;options&gt;)
 Where options is an array of objects and each object is as follows
@@ -33,7 +33,7 @@ Where options is an array of objects and each object is as follows
 <code>dropdownTemplate(&quot;Please choose option from below&quot;,&quot;select option&quot;,[{&quot;title&quot;: &quot;option1&quot;,&quot;payload&quot;: &quot;option1&quot;},{&quot;title&quot;: &quot;option2&quot;,&quot;payload&quot;: &quot;option2&quot;},{&quot;title&quot;: &quot;option3&quot;,&quot;payload&quot;: &quot;option3&quot;}])</code>
 
 For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;.choice.
-<h2>3. Button Template</h2>
+<h2>4. Button Template</h2>
 <h3>Syntax</h3>
 <code>buttonTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)</code>
 
@@ -53,7 +53,7 @@ URL
 <h3>Usage</h3>
 <code>buttonTemplate(&quot;buttons to test&quot;, [{&quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button1&quot;,&quot;payload&quot;: &quot;b1&quot;}, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button2&quot;, &quot;payload&quot;: &quot;b2&quot; }, { &quot;type&quot;: &quot;url&quot;, &quot;title&quot;: &quot;google&quot;, &quot;url&quot;: &quot;https://www.google.com&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button3&quot;, &quot;payload&quot;: &quot;b3&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button4&quot;, &quot;payload&quot;: &quot;b4&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button5&quot;, &quot;payload&quot;: &quot;b5&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button6&quot;, &quot;payload&quot;: &quot;b6&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button7&quot;, &quot;payload&quot;: &quot;b7&quot; }, { &quot;type&quot;: &quot;url&quot;, &quot;title&quot;: &quot;bots&quot;, &quot;url&quot;: &quot;https://bots.kore.ai&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button8&quot;, &quot;payload&quot;: &quot;b8&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button9&quot;, &quot;payload&quot;: &quot;b9&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button10&quot;, &quot;payload&quot;: &quot;b10&quot; }, { &quot;type&quot;: &quot;postback&quot;, &quot;title&quot;: &quot;button11&quot;, &quot;payload&quot;: &quot;b11&quot; }, { &quot;type&quot;: &quot;url&quot;, &quot;title&quot;: &quot;youtube&quot;, &quot;url&quot;: &quot;https://www.youtube.com&quot; }])))</code>
 
-<h2>4. Table Template</h2>
+<h2>5. Table Template</h2>
 <h3>Syntax</h3>
 <code>tableTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)</code>
 Where options is an object and has two keys i.e columns and rows
@@ -72,13 +72,13 @@ Where options is an object and has two keys i.e columns and rows
     ]
 })</code>
 
-<h2>5. Image Template</h2>
+<h2>6. Image Template</h2>
 <h3>Syntax</h3>
 <code>imageTemplate(&lt;string to be displayed&gt;, &quot;image url&quot;)</code>
 <h3>Usage</h3>
 <code>imageTemplate(&quot;Here is the image&quot;,&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Seattle_monorail01_2008-02-25.jpg/1024px-Seattle_monorail01_2008-02-25.jpg&quot;)</code>
 
-<h2>6. Carousel Template</h2>
+<h2>7. Carousel Template</h2>
 <h3>Syntax</h3>
 <code>tableTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)</code>
 Where options is an array of objects and each object is as follows
@@ -129,7 +129,7 @@ Where options is an array of objects and each object is as follows
     }
 ])</code>
 
-<h2>7. Multiselect Template</h2>
+<h2>8. Multiselect Template</h2>
 <h3>Syntax</h3>
 <code>multiSelectTemplate(&lt;string to be displayed&gt;,&lt;options&gt;)</code>
 
@@ -139,7 +139,7 @@ Where options is an array of choices(strings)
 
 For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;. The entity will contains object with the choices as keys. The selected keys value will be true and the remaining keys will be false.
 
-<h2>8. Date Template</h2>
+<h2>9. Date Template</h2>
 <h3>Syntax</h3>
 <code>dateTemplate(&lt;string to be displayed&gt;)</code>
 <h3>Usage</h3>
@@ -147,7 +147,7 @@ For this template, we need to use a composite entity and the value will be avail
 
 For this template, we need to use a composite entity and the value will be available at context.entities.&lt;entityName&gt;.date.
 
-<h2>9. List View Template1</h2>
+<h2>10. List View Template1</h2>
 <h3>Syntax</h3>
 <code>listViewTemplate1(&lt;string to be displayed&gt;,&lt;options&gt;,&lt;number of items to be displayed on top&gt;,&lt;see more tex&gt;)</code>
 Where options is an array of objects and each object is as follows
@@ -176,7 +176,7 @@ Where options is an array of objects and each object is as follows
 {&quot;title&quot;:&quot;Carouse 3&quot;,&quot;subtitle&quot;:&quot;This is carousel 3 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button3&quot;,&quot;payload&quot;:&quot;b3&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]},
 {&quot;title&quot;:&quot;Carouse 4&quot;,&quot;subtitle&quot;:&quot;This is carousel 4 template&quot;,&quot;default_actions&quot;:[{&quot;type&quot;:&quot;postback&quot;,&quot;title&quot;:&quot;button4&quot;,&quot;payload&quot;:&quot;b4&quot;},{&quot;type&quot;:&quot;url&quot;,&quot;title&quot;:&quot;google&quot;,&quot;url&quot;:&quot;https://www.google.com&quot;}]}], 3, &quot;See More/Less&quot;)</code>
 
-<h2>10. List View Template2</h2>
+<h2>11. List View Template2</h2>
 <h3>Syntax</h3>
 <code>listViewTemplate2(&lt;string to be displayed&gt;,&lt;options&gt;,&lt;number of items to be displayed on top&gt;,&lt;see more tex&gt;)</code>
 Where options is an array of objects and each object is as follows
