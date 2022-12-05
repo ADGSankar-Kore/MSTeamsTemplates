@@ -12,6 +12,12 @@ var adaptiveCard = {
     }]
 }
 
+const genericTemplate = (adaptiveCardJSON) => {
+    adaptiveCard.attachments[0].content = adaptiveCardJSON;
+    return adaptiveCard;
+}
+
+// console.log(JSON.stringify(genericTemplate({"type":"AdaptiveCard","$schema":"http://adaptivecards.io/schemas/adaptive-card.json","version":"1.2","body":[{"type":"TextBlock","text":"New TextBlock","wrap":true},{"type":"Image"},{"type":"RichTextBlock","inlines":[{"type":"TextRun","text":"New RichTextBlock"}]},{"type":"FactSet","facts":[{"title":"Fact 1","value":"Value 1"},{"title":"Fact 2","value":"Value 2"}]},{"type":"Input.Time"},{"type":"Input.ChoiceSet","choices":[{"title":"Choice 1","value":"Choice 1"},{"title":"Choice 2","value":"Choice 2"}],"placeholder":"Placeholder text"}]})))
 
 const passwordTemplate = (displayText = "") => {
     var body = [

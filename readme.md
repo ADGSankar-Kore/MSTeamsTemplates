@@ -3,6 +3,15 @@
 
 Please refer to the below mentioned github repo for the methods mentioned in the documentation
 
+<h2>1. Generic Template</h2>
+<p>The generic template lets you allow you to design the UI in the https://adaptivecards.io/designer/ and the JSON that got generated can be passed to this function and will be automatically rendered.</p>
+<h3>Syntax</h3>
+<code>genericTemplate(&quot;adaptive card JSON object&quot;)</code>
+<h3>Usage</h3>
+
+<code>genericTemplate({&quot;type&quot;:&quot;AdaptiveCard&quot;,&quot;$schema&quot;:&quot;http://adaptivecards.io/schemas/adaptive-card.json&quot;,&quot;version&quot;:&quot;1.2&quot;,&quot;body&quot;:[{&quot;type&quot;:&quot;TextBlock&quot;,&quot;text&quot;:&quot;New TextBlock&quot;,&quot;wrap&quot;:true},{&quot;type&quot;:&quot;Image&quot;},{&quot;type&quot;:&quot;RichTextBlock&quot;,&quot;inlines&quot;:[{&quot;type&quot;:&quot;TextRun&quot;,&quot;text&quot;:&quot;New RichTextBlock&quot;}]},{&quot;type&quot;:&quot;FactSet&quot;,&quot;facts&quot;:[{&quot;title&quot;:&quot;Fact 1&quot;,&quot;value&quot;:&quot;Value 1&quot;},{&quot;title&quot;:&quot;Fact 2&quot;,&quot;value&quot;:&quot;Value 2&quot;}]},{&quot;type&quot;:&quot;Input.Time&quot;},{&quot;type&quot;:&quot;Input.ChoiceSet&quot;,&quot;choices&quot;:[{&quot;title&quot;:&quot;Choice 1&quot;,&quot;value&quot;:&quot;Choice 1&quot;},{&quot;title&quot;:&quot;Choice 2&quot;,&quot;value&quot;:&quot;Choice 2&quot;}],&quot;placeholder&quot;:&quot;Placeholder text&quot;}]})</code>
+
+
 <h2>1. Password Template</h2>
 <h3>Syntax</h3>
 <code>passwordTemplate(&quot;string to be displayed&quot;)</code>
