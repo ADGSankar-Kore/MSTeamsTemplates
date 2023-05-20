@@ -155,7 +155,7 @@ const buttonTemplate = (displayText = "", options = []) => {
 }
 
 // console.log(JSON.stringify(buttonTemplate("buttons to test", [{"type": "postback", "title": "button1","payload": "b1"}, { "type": "postback", "title": "button2", "payload": "b2" }, { "type": "url", "title": "google", "url": "https://www.google.com" }, { "type": "postback", "title": "button3", "payload": "b3" }, { "type": "postback", "title": "button4", "payload": "b4" }, { "type": "postback", "title": "button5", "payload": "b5" }, { "type": "postback", "title": "button6", "payload": "b6" }, { "type": "postback", "title": "button7", "payload": "b7" }, { "type": "url", "title": "bots", "url": "https://bots.kore.ai" }, { "type": "postback", "title": "button8", "payload": "b8" }, { "type": "postback", "title": "button9", "payload": "b9" }, { "type": "postback", "title": "button10", "payload": "b10" }, { "type": "postback", "title": "button11", "payload": "b11" }, { "type": "url", "title": "youtube", "url": "https://www.youtube.com" }])))
-
+// console.log(JSON.stringify(buttonTemplate("Please provide feedback", [{"type": "postback", "title": "⭐","payload": "b1"}, { "type": "postback", "title": "⭐⭐", "payload": "b2" }, { "type": "postback", "title": "⭐⭐⭐", "payload": "b3" }, { "type": "postback", "title": "⭐⭐⭐⭐", "payload": "b4" }, { "type": "postback", "title": "⭐⭐⭐⭐⭐", "payload": "b5" }])))
 
 const tableTemplate = (displayText, data = []) => {
     var body = [
@@ -590,9 +590,15 @@ const listViewTemplate2 = (displayText, data = [], topItemsCount, showMoreText) 
             })
         }
         buttonsColumn.items.push(actionsSet);
-        elements.columns.push(imageColumn);
-        elements.columns.push(bodyColumn);
-        elements.columns.push(buttonsColumn);
+        if(imageColumn.items.length){
+            elements.columns.push(imageColumn);
+        }
+        if(bodyColumn.items.length){
+            elements.columns.push(bodyColumn);
+        }
+        if(buttonsColumn.items.length){
+            elements.columns.push(buttonsColumn);
+        }
         body.push(elements)
     }
     adaptiveCard.attachments[0].content.body = body;
@@ -613,5 +619,10 @@ for (var i = 0; i < 5; i++) {
         }
     )
 }
+data.push({
+    "default_actions": [
+        { "type": "postback", "title": "None of These", "payload": "None of these"}]
+}
+)
 // console.log(JSON.stringify(data))
-// console.log(JSON.stringify(listViewTemplate2("list view template 2", data, 3, "See More/Less")))
+console.log(JSON.stringify(listViewTemplate2("list view template 2", data, 3, "See More/Less")))
